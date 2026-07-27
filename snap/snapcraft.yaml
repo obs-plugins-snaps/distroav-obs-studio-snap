@@ -74,7 +74,7 @@ parts:
       - -G Ninja
     organize:
       usr/lib/*/obs-plugins/distroav.so: ${CRAFT_PROJECT_NAME}/plugins/distroav.so
-      usr/share/obs/obs-plugins/distroav: ${CRAFT_PROJECT_NAME}/data
+      usr/share/obs/obs-plugins/distroav: ${CRAFT_PROJECT_NAME}/data/distroav
     prime:
       - -usr/lib/*/obs-plugins
       - -usr/share/obs/obs-plugins
