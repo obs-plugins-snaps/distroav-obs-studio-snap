@@ -1,0 +1,12 @@
+diff --git a/src/plugin-main.cpp b/src/plugin-main.cpp
+index b5b2f2a..feee0bd 100644
+--- a/src/plugin-main.cpp
++++ b/src/plugin-main.cpp
+@@ -550,6 +550,7 @@ const NDIlib_v6 *load_ndilib()
+ 	locations << "/usr/local/lib";
+ #if defined(Q_OS_LINUX)
+ 	locations << "/app/plugins/DistroAV/extra/lib";
++	locations << "/var/snap/obs-studio/current/obs-plugins/lib";
+ #endif
+ #endif
+ 	auto lib_path = QString();

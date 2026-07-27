@@ -5,26 +5,38 @@ to the [OBS Studio snap](https://snapcraft.io/obs-studio).
 DistroAV adds NDI® support to OBS Studio, allowing you to send and receive high-quality,
 low-latency audio and video over your local network.
 
+This snap is paired with the **ndi-runtime** snap, which provides the proprietary
+NDI SDK runtime library (`libndi.so`). Both snaps connect to OBS Studio via the
+`obs-plugins` content interface.
+
 ## Installation
 
 ### Install from the Store
 
 ```shell
 sudo snap install distroav-obs-studio
+sudo snap install ndi-runtime
 ```
 
 ### Connect to the OBS Studio snap
 
 ```shell
 sudo snap connect obs-studio:obs-plugins distroav-obs-studio:obs-plugins
+sudo snap connect obs-studio:obs-plugins ndi-runtime:obs-plugins
 ```
 
 Once connected, DistroAV will appear in OBS Studio under **Tools → DistroAV** and as a source/filter.
 
-NDI® is a registered trademark of Vizrt NDI AB. For more information about NDI, visit [ndi.video](https://ndi.video/).
+## Architecture
 
-> [!WARNING]
-> The current `snapcraft.yaml` bundles the NDI SDK (proprietary) alongside the GPL-licensed DistroAV plugin.
-> This means the snap as a whole is not distributable as GPL, and the NDI library loading does **not**
-> actually work at runtime—the plugin fails to find `libndi.so.6`. This is **not legal advice**; consult a
-> lawyer if you have concerns about license compatibility.
+```
+obs-studio
+  ├── obs-plugins:distroav-obs-studio  →  /distroav-obs-studio/plugins/libdistroav.so
+  └── obs-plugins:ndi-runtime           →  /ndi-runtime/lib/libndi.so.6
+```
+
+OBS Studio's launcher scans all connected plugin snaps: it loads `.so` files from
+`/plugins` and adds `/lib` directories to `LD_LIBRARY_PATH`. DistroAV's `dlopen`
+fallback finds `libndi.so.6` via the runtime linker path — no source patching needed.
+
+NDI® is a registered trademark of Vizrt NDI AB. For more information about NDI, visit [ndi.video](https://ndi.video/).
