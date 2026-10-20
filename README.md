@@ -40,3 +40,15 @@ OBS Studio's launcher scans all connected plugin snaps: it loads `.so` files fro
 fallback finds `libndi.so.6` via the runtime linker path — no source patching needed.
 
 NDI® is a registered trademark of Vizrt NDI AB. For more information about NDI, visit [ndi.video](https://ndi.video/).
+
+## Building locally
+
+```shell
+snapcraft
+```
+
+The plugin is built against the libobs headers shipped in the
+`obs-studio` snap, so no local OBS build is required.
+
+The snap starts in `devel` grade; flip it to `stable` in
+`snap/snapcraft.yaml` once the packaged plugin is verified to work.
