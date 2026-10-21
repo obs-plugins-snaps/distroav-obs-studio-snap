@@ -41,7 +41,7 @@ fallback finds `libndi.so.6` via the runtime linker path — no source patching 
 
 NDI® is a registered trademark of Vizrt NDI AB. For more information about NDI, visit [ndi.video](https://ndi.video/).
 
-## Building locally
+## Development
 
 ```shell
 snapcraft

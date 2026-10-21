@@ -18,6 +18,19 @@ description: |
 
   NDI® is a registered trademark of Vizrt NDI AB.
 
+  **Installation**
+
+  Install the snap:
+
+      sudo snap install distroav-obs-studio
+
+  Then connect it to the OBS Studio snap:
+
+      sudo snap connect obs-studio:obs-plugins distroav-obs-studio:obs-plugins
+
+  Once connected, the plugin will be available in OBS Studio after restarting
+  it.
+
 website: https://github.com/DistroAV/DistroAV
 source-code: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
 contact: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
