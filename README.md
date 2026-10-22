@@ -1,5 +1,7 @@
 # DistroAV Snap for OBS Studio
 
+[![distroav-obs-studio](https://snapcraft.io/distroav-obs-studio/badge.svg)](https://snapcraft.io/distroav-obs-studio)
+
 This snap delivers [DistroAV](https://github.com/DistroAV/DistroAV) (formerly OBS-NDI)
 to the [OBS Studio snap](https://snapcraft.io/obs-studio).
 DistroAV adds NDI® support to OBS Studio, allowing you to send and receive high-quality,

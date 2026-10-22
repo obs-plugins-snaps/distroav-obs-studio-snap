@@ -5,9 +5,7 @@ title: DistroAV (OBS NDI plugin)
 summary: "NDI integration for OBS Studio"
 license: GPL-2.0
 description: |
-  DistroAV (formerly OBS-NDI) is a plugin for OBS Studio that adds NDI®
-  (Network Device Interface) support, allowing you to send and receive
-  high-quality, low-latency audio and video over your local network.
+  DistroAV (formerly OBS-NDI) is a plugin for OBS Studio that adds NDI® (Network Device Interface) support, allowing you to send and receive high-quality, low-latency audio and video over your local network.
 
   This plugin provides:
   - NDI Source: Receive NDI video/audio in OBS
@@ -33,8 +31,11 @@ description: |
 
 website: https://distroav.org
 source-code: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
-contact: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
-issues: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
+contact: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap/issues
+issues: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap/issues
+
+
+icon: snap/gui/icon.png
 
 grade: stable
 confinement: strict
