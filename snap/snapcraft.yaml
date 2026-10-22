@@ -31,7 +31,7 @@ description: |
   Once connected, the plugin will be available in OBS Studio after restarting
   it.
 
-website: https://github.com/DistroAV/DistroAV
+website: https://distroav.org
 source-code: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
 contact: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
 issues: https://github.com/obs-plugins-snaps/distroav-obs-studio-snap
