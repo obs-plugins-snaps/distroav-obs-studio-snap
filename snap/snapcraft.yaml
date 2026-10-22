@@ -1,7 +1,12 @@
 name: distroav-obs-studio
 base: core24
+<<<<<<< before updating
 version: '6.2.1'
 title: DistroAV (OBS NDI plugin)
+=======
+adopt-info: distroav
+title: Distroav (OBS plugin)
+>>>>>>> after updating
 summary: "NDI integration for OBS Studio"
 license: GPL-2.0
 description: |
@@ -61,10 +66,22 @@ parts:
       - prepare-hook
     source: https://github.com/DistroAV/DistroAV.git
     source-type: git
+<<<<<<< before updating
     source-tag: 6.2.1
     override-pull: |
       craftctl default
       patch -p1 < "${CRAFT_PROJECT_DIR}/snap/local/patches/0001-fix-paths.patch"
+=======
+    # Pin to the release matching the version above; edit by hand if the
+    # upstream tag name differs (e.g. a 'v' prefix or a beta tag).
+    source-tag: '0.1.0'
+    # The snap version is adopted from the tagged source tree (see the
+    # top-level adopt-info), so the packaged bits and the store
+    # metadata always agree.
+    override-pull: |
+      craftctl default
+      craftctl set version="$(git describe --tags | sed 's/^v\([0-9]\)/\1/')"
+>>>>>>> after updating
     plugin: cmake
     build-snaps:
       - obs-studio/latest/stable
