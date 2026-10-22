@@ -5,7 +5,7 @@ to the [OBS Studio snap](https://snapcraft.io/obs-studio).
 DistroAV adds NDI® support to OBS Studio, allowing you to send and receive high-quality,
 low-latency audio and video over your local network.
 
-This snap is paired with the **ndi-runtime** snap, which provides the proprietary
+This snap is paired with the **ndi-runtime-obs-studio** snap, which provides the proprietary
 NDI SDK runtime library (`libndi.so`). Both snaps connect to OBS Studio via the
 `obs-plugins` content interface.
 
@@ -15,14 +15,14 @@ NDI SDK runtime library (`libndi.so`). Both snaps connect to OBS Studio via the
 
 ```shell
 sudo snap install distroav-obs-studio
-sudo snap install ndi-runtime
+sudo snap install ndi-runtime-obs-studio
 ```
 
 ### Connect to the OBS Studio snap
 
 ```shell
 sudo snap connect obs-studio:obs-plugins distroav-obs-studio:obs-plugins
-sudo snap connect obs-studio:obs-plugins ndi-runtime:obs-plugins
+sudo snap connect obs-studio:obs-plugins ndi-runtime-obs-studio:obs-plugins
 ```
 
 Once connected, DistroAV will appear in OBS Studio under **Tools → DistroAV** and as a source/filter.
@@ -32,7 +32,7 @@ Once connected, DistroAV will appear in OBS Studio under **Tools → DistroAV** 
 ```
 obs-studio
   ├── obs-plugins:distroav-obs-studio  →  /distroav-obs-studio/plugins/libdistroav.so
-  └── obs-plugins:ndi-runtime           →  /ndi-runtime/lib/libndi.so.6
+  └── obs-plugins:ndi-runtime-obs-studio →  /ndi-runtime-obs-studio/lib/libndi.so.6
 ```
 
 OBS Studio's launcher scans all connected plugin snaps: it loads `.so` files from
