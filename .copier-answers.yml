@@ -20,7 +20,7 @@ description: 'DistroAV (formerly OBS-NDI) is a plugin for OBS Studio that adds N
 
 
     NDI® is a registered trademark of Vizrt NDI AB.'
-initial_source_tag: 0.1.0
+initial_source_tag: 6.2.1
 license: GPL-2.0
 plugin_name: distroav
 source_url: https://github.com/DistroAV/DistroAV.git
