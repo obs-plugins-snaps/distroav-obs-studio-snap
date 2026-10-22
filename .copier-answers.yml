@@ -1,5 +1,5 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v0.0.6
+_commit: v0.0.14
 _src_path: https://github.com/obs-plugins-snaps/template.git
 description: 'DistroAV (formerly OBS-NDI) is a plugin for OBS Studio that adds NDI®
     (Network Device Interface) support, allowing you to send and receive high-quality,
@@ -20,6 +20,7 @@ description: 'DistroAV (formerly OBS-NDI) is a plugin for OBS Studio that adds N
 
 
     NDI® is a registered trademark of Vizrt NDI AB.'
+initial_source_tag: 0.1.0
 license: GPL-2.0
 plugin_name: distroav
 source_url: https://github.com/DistroAV/DistroAV.git
