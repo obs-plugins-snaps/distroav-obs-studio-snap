@@ -62,7 +62,7 @@ parts:
       - prepare-hook
     source: https://github.com/DistroAV/DistroAV.git
     source-type: git
-    source-tag: '6.2.1'
+    source-tag: '6.2.2'
     override-pull: |
       craftctl default
       craftctl set version="$(git describe --tags | sed 's/^v\([0-9]\)/\1/')"
