@@ -1,0 +1,14 @@
+
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "schedule": ["after 4am and before 8am"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^snap/snapcraft\\.yaml$"],
+      "matchStrings": ["source-tag:\\s*'(?<currentValue>[^']+)'"],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "DistroAV/DistroAV"
+    }
+  ]
+}
