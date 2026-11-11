@@ -8,3 +8,6 @@ jobs:
     uses: obs-plugins-snaps/workflows/.github/workflows/build-snap.yml@main
     with:
       plugin_name: "distroav"
+      # DistroAV builds take up to ~1h on a cold cache; the default cap is
+      # 60 minutes and cancels the job before the build finishes.
+      timeout-minutes: 180
