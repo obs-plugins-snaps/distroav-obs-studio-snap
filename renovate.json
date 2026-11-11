@@ -6,7 +6,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^snap/snapcraft\\.yaml$"],
+      "managerFilePatterns": [
+        "/^snap/snapcraft\\.yaml$/"
+      ],
       "matchStrings": ["source-tag:\\s*'(?<currentValue>[^']+)'"],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "DistroAV/DistroAV"
